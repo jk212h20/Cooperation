@@ -1,7 +1,7 @@
 # STATE — Cross-Project Snapshot
 
 > This file represents **now**. It is not append-only. The journal is the history; this is the photo.
-> Last updated: 2026-05-12 13:10 PT by Nick + pi/sonnet-4.5
+> Last updated: 2026-05-12 13:25 PT by Nick + pi/sonnet-4.5
 
 ## Active work
 
@@ -19,12 +19,9 @@ _None yet._
 
 ## Open infra items
 
-- **Branch protection on `main` is not enforced.** GitHub blocks branch protection rules and rulesets on free private repos (403 "Upgrade to GitHub Pro or make this repository public"). Three options:
-  1. Make the Cooperation repo public — it's process docs + templates, no secrets. Lowest friction.
-  2. Upgrade to GitHub Pro.
-  3. Skip enforcement; rely on rule A4 by convention. Risk: a misbehaving agent can still push to `main`.
-  Decision pending from Nick.
-- **`gitleaks` pre-commit hook** not installed yet. Will wire up when first project repo is created (rule A5.5).
+- **Cooperation repo is now PUBLIC.** Decision: process docs + templates + journal are not sensitive today. If the journal ever needs to contain sensitive context, split it off into a private sibling repo (ADR-0001 "Revisit if" already flags this).
+- **Branch protection on `main` is ENFORCED** (as of 2026-05-12 13:25 PT): PRs required (0 approving reviews so solo self-merge is allowed per A4.3), force-pushes blocked, deletion blocked. **From the next commit onward, A4.1 binds: no direct pushes to main.**
+- **`gitleaks` pre-commit hook** not installed yet. Will wire up when first project repo is created (rule A5.5). Higher priority now that the repo is public.
 - **Pi package install verified** for Nick's machine: `pi install git:github.com/jk212h20/Cooperation` clones the repo and discovers skills `cooperation-session-start` and `cooperation-session-end`. **Skills will become available after pi is reloaded** — Nick to reload at his discretion.
 
 ## Background processes running
