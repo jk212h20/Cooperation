@@ -1,0 +1,36 @@
+# Secrets — never commit (Cooperation rule A5)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+build/
+.next/
+
+# Logs / scratch
+*.log
+/tmp/
+scratch/
