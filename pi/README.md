@@ -10,12 +10,12 @@ After cloning Cooperation (or even without cloning), each partner runs:
 pi install git:github.com/jk212h20/Cooperation
 ```
 
-That installs from the `pi/` subdirectory of this repo (pi finds the `package.json` here). Re-run `pi update` to pull the latest.
+Pi clones the whole repo and reads the root `package.json`, which points at the resource directories inside `pi/`. Re-run `pi update` to pull the latest.
 
 If you want to test local edits before pushing:
 
 ```bash
-pi install /Users/<you>/ActiveProjects/Cooperation/pi
+pi install /Users/<you>/ActiveProjects/Cooperation
 ```
 
 ## What goes in here (synced across partners)

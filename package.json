@@ -1,0 +1,13 @@
+{
+  "name": "cooperation",
+  "version": "0.1.0",
+  "description": "Cooperation workflow operating manual + shared pi package. See pi/ for the pi resources; everything else is process/docs/journal.",
+  "private": true,
+  "keywords": ["pi-package"],
+  "pi": {
+    "extensions": ["./pi/extensions"],
+    "skills": ["./pi/skills"],
+    "prompts": ["./pi/prompts"],
+    "themes": ["./pi/themes"]
+  }
+}

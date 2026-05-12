@@ -1,7 +1,7 @@
 {
   "name": "cooperation-pi",
   "version": "0.1.0",
-  "description": "Shared pi extensions, skills, prompts, and themes for the Cooperation workflow.",
+  "description": "Local pi manifest for editing/testing. The canonical manifest is at the repo root so 'pi install git:...' works on the whole repo.",
   "private": true,
   "keywords": ["pi-package"],
   "pi": {
