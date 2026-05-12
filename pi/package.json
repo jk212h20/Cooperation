@@ -1,0 +1,13 @@
+{
+  "name": "cooperation-pi",
+  "version": "0.1.0",
+  "description": "Shared pi extensions, skills, prompts, and themes for the Cooperation workflow.",
+  "private": true,
+  "keywords": ["pi-package"],
+  "pi": {
+    "extensions": ["./extensions"],
+    "skills": ["./skills"],
+    "prompts": ["./prompts"],
+    "themes": ["./themes"]
+  }
+}

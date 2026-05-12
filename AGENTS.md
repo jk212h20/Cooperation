@@ -12,11 +12,29 @@ At the start of **every** session, in this order:
 
 1. This file (`AGENTS.md`) in full.
 2. `STATE.md` in the Cooperation repo — the cross-project snapshot.
-3. The last entry in `JOURNAL/` (the most recent dated file).
-4. If working in a project repo, that repo's own `AGENTS.md` (which points back here) and its `STATE.md` if present.
-5. `~/ActiveProjects/AGENTS.md` — the user's personal cross-project rules (especially R1 "don't block on long compute" and R2 "pushed ≠ deployed"). Those rules apply here too.
+3. `SYNC.md` in the Cooperation repo — when each partner's agent last pulled. **Note explicitly when the other partner last synced.**
+4. The last entry in `JOURNAL/` (the most recent dated file).
+5. If working in a project repo, that repo's own `AGENTS.md` (which points back here) and its `STATE.md` if present.
+6. `~/ActiveProjects/AGENTS.md` — the user's personal cross-project rules (especially R1 "don't block on long compute" and R2 "pushed ≠ deployed"). Those rules apply here too.
 
 If any of these files are missing or stale (last journal entry older than 7 days), say so explicitly in your first message and ask before proceeding.
+
+The `cooperation-session-start` skill (from the `Cooperation` pi package) automates steps 1–6 and step A0.5 below. If it's installed, use it; if not, do the steps manually and mention it.
+
+---
+
+## A0.5: Refresh and record your sync
+
+Immediately after reading the rules:
+
+1. `cd ~/ActiveProjects/Cooperation && git fetch --all && git pull` (and the same in the project repo you're working in).
+2. Append one line to `SYNC.md` under your partner's section:
+   ```
+   - YYYY-MM-DD HH:MM <tz> — fetched origin, HEAD <short-sha>, working in <repo>
+   ```
+3. If the *other* partner's most recent SYNC line is within the last ~hour, flag concurrent-work risk in your first message and re-read STATE.md right before any non-trivial change.
+
+This line is the receipt that you actually synced. **Absence implies you didn't.**
 
 ---
 
@@ -189,7 +207,8 @@ The other partner's agent may be working concurrently. To avoid stomping:
 ## Quick checklist (paste into your final message of a session)
 
 ```
-[ ] A0 read: AGENTS.md, STATE.md, latest journal, ~/ActiveProjects/AGENTS.md
+[ ] A0 read: AGENTS.md, STATE.md, SYNC.md, latest journal, ~/ActiveProjects/AGENTS.md
+[ ] A0.5 fetched + appended SYNC.md line; noted other partner's last sync
 [ ] A1 identified human + project at session start
 [ ] A2 journal entry written at JOURNAL/YYYY-MM-DD.md
 [ ] A3 STATE.md reflects current reality

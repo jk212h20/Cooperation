@@ -4,10 +4,12 @@ This repo is the **operating manual** for a two-person collaboration with LLM co
 
 - The rules every agent must follow (`AGENTS.md`).
 - The current cross-project state (`STATE.md`).
+- Per-partner sync heartbeats (`SYNC.md`).
 - The session journal (`JOURNAL/`).
 - Architectural / process decisions (`DECISIONS/`).
 - The list of active project repos (`PROJECTS.md`).
 - Templates for spinning up new project repos (`templates/`).
+- A pi package of shared extensions/skills/prompts (`pi/`) — install with `pi install git:github.com/jk212h20/Cooperation`.
 - Who the partners are and how we work together (`PARTNERS.md`, `WORKFLOW.md`).
 
 ## For humans starting a session

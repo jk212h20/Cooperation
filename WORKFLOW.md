@@ -25,6 +25,17 @@ This is the human-facing version of the rules. The strict version agents must fo
 6. Configure Railway (if deploying): create the project, set env vars, point it at the GitHub repo. Record the Railway project name in the project's README.
 7. Open a journal entry in `Cooperation/JOURNAL/` noting the new project.
 
+## Shared pi config
+
+Both partners install the Cooperation pi package so we share extensions, skills, prompts, and themes:
+
+```bash
+pi install git:github.com/jk212h20/Cooperation
+pi update   # later, to refresh
+```
+
+The package lives in `pi/` in this repo. Personal pi config (model preferences, auth) stays in `~/.pi/agent/` and is not synced. See `pi/README.md`.
+
 ## Daily flow
 
 - **Session start:** `cd Cooperation && git pull && cat STATE.md && ls JOURNAL/ | tail -3`.
